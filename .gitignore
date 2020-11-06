@@ -5,7 +5,6 @@
 **/dist
 **/tmp
 **/out-tsc
-public
 
 # IDEs and editors
 .idea
