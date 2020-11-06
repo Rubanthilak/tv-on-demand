@@ -1,0 +1,38 @@
+# dependencies
+**/node_modules
+
+# compiled output
+**/dist
+**/tmp
+**/out-tsc
+public
+
+# IDEs and editors
+.idea
+.project
+.classpath
+.c9
+.settings
+.vscode
+*.launch
+*.sublime-workspace
+
+# misc
+.env
+.sass-cache
+NOTES.md
+ROADMAP.md
+secrets.json
+connect.lock
+resources
+archive
+coverage
+typings
+libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+
+# system files
+.DS_Store
+Thumbs.db
