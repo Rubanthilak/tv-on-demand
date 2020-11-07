@@ -1,0 +1,100 @@
+.container{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.flex{
+    display: flex;
+}
+
+.mini-dash{
+    height: 1px;
+    width: 60px;
+    background: var(--hash);
+    margin-top: 10px;
+    opacity: 0.5;
+}
+
+.slider-container{
+    display: flex;
+    margin-left: 50px;
+    height: calc(100vh - 305px);
+    min-height: calc(800px - 305px);
+}
+
+.card{
+    margin: auto 40px auto 0px;
+    height: 85%;
+    max-height: 420px;
+    width: 270px;
+    box-shadow: var(--card-shadow); 
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+
+    img{
+        height: 100%;
+        width: 100%;
+    }
+
+    .card-details{
+        position: absolute;
+        bottom: 0px;
+        height: 0%;
+        width: 100%;
+        background-image: var(--card-gradient);
+        transition: 1s;
+    }
+
+    &:hover .card-details{
+        height: 25%;
+    }
+}
+
+.slider-controller{
+    display: flex;
+    height: 100px;
+    width: calc(100% - 100px);
+}
+
+.bar{
+    height: 3px;
+    width: 20px;
+    border: none;
+    border-radius: 360px;
+    background-color: var(--hash);
+    opacity: 0.25;
+}
+
+.lt-arrow{
+    margin: 20px 50px auto 0px;
+    cursor: pointer;
+    &:hover .bar{
+        background-color: var(--red);
+        opacity: 1;
+    }
+    .bar1{
+        transform: rotate(135deg);
+    }
+    .bar2{
+        transform: rotate(45deg);
+        margin-top: 10px;
+    }
+}
+
+.rt-arrow{
+    cursor: pointer;
+    margin:  20px 0px auto 0px;
+    &:hover .bar{
+        background-color: var(--red);
+        opacity: 1;
+    }
+    .bar1{
+        transform: rotate(45deg);
+    }
+    .bar2{
+        transform: rotate(135deg);
+        margin-top: 10px;
+    }
+}
