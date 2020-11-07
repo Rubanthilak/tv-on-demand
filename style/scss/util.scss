@@ -17,21 +17,37 @@
 
 .slider-container{
     display: flex;
-    margin-left: 50px;
+    flex-wrap: nowrap;
     height: calc(100vh - 305px);
     min-height: calc(800px - 305px);
+    overflow-x: scroll;
+    overflow-y: visible;
+    transition: 1s;
+    position: relative;
+
+    // To make scroll invisible
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+        display: none; /* Chrome */
+    }
+
+    .card{
+        margin: auto 0px auto 50px;
+    }
+
 }
 
 .card{
-    margin: auto 40px auto 0px;
     height: 85%;
     max-height: 420px;
-    width: 270px;
+    min-width: 270px;
     box-shadow: var(--card-shadow); 
     border-radius: 8px;
     overflow: hidden;
     position: relative;
     cursor: pointer;
+    transition: 0.5s;
 
     img{
         height: 100%;
@@ -44,12 +60,17 @@
         height: 0%;
         width: 100%;
         background-image: var(--card-gradient);
-        transition: 1s;
+        transition: 0.35s;
     }
 
-    &:hover .card-details{
-        height: 25%;
-    }
+    &:hover{
+        max-height: 480px;
+        min-width: 320px;
+        box-shadow: 0 0px 30px #00000054;
+        .card-details{
+            height: 25%;
+        }
+    } 
 }
 
 .slider-controller{
