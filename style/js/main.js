@@ -1,27 +1,25 @@
 import { movieList } from './const'
 
 $( document ).ready(()=>{
-    let res = "";
-    movieList.forEach(function(movie) {
-        res += `
-                    <div class="card" id="${movie.imdbID}">
-                    <img src="${movie.Poster}" alt="${movie.Title}">
-                    <div class="card-details">
-                    </div>
-                    </div>
-                `;
-        });
-        res +=`
-            <div class="padding" ></div>
-        `;
-    $("#slider").html(res);
+    getSliderData("popular");
 });
 
 // NAVBAR CONTROLLER
 
 $("nav p").click(function(event){
+
+    $("#slider").css({opacity:0});
+    setTimeout(function(){$("#slider").animate({scrollLeft:'0'},0);},400);
+
     $("nav p").removeClass("active");
     $(event.target).addClass("active");
+    
+    setTimeout(function(){
+        getSliderData(event.target.id);
+        $("#slider").animate({
+            opacity:1,
+        },300);
+    },500)
 });
 
 // SLIDER CONTROLLER
@@ -42,14 +40,46 @@ $(".lt-arrow").click(function(){
     }
 });
 
-// HELPER FUNCTION
+// SLIDER HELPER FUNCTION
 
-/* Returns the horizontal scroll position of the home screen slider */
+/* Returns the horizontal scroll position */
 function getScrollPosition(){
     return $(".slider-container").first().scrollLeft();  
 }
 
-/* To get scroll length */
+/* To get horizontal scroll length */
 function getScrollLength(){
     return (320*(10 - ($(window).width()/320))) + 50;
+}
+
+// RETURN SILDER JSON DATA BASED ON THE NAVBAR
+
+function getSliderData(text){
+    let res = "";
+    let data;
+
+    if(text === "popular"){
+        data = movieList.filter(movie => movie.popular === true);
+    }
+    else if(text === "featured"){
+        data = movieList.filter(movie => movie.featured === true);
+    }
+    else{
+        data = movieList.filter(movie => movie.toprated === true);
+    }
+
+    data.forEach(function(movie) {
+        res += `
+                    <div class="card" id="${movie.imdbID}">
+                    <img src="${movie.Poster}" alt="${movie.Title}">
+                    <div class="card-details">
+                    </div>
+                    </div>
+                `;
+        });
+        res +=`
+            <div class="padding" ></div>
+        `;
+    $("#slider").html(res);
+
 }
