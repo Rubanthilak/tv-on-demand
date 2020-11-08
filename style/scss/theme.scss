@@ -81,6 +81,7 @@ input {
 nav{
   margin-top: 60px;
   p{
+        transition: 0.5s;
         margin-right: 80px;
         font-weight: 400;
         color: var(--hash);
