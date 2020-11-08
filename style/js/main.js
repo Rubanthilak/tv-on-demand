@@ -9,17 +9,20 @@ $( document ).ready(()=>{
 $("nav p").click(function(event){
 
     $("#slider").css({opacity:0});
-    setTimeout(function(){$("#slider").animate({scrollLeft:'0'},0);},400);
-
     $("nav p").removeClass("active");
     $(event.target).addClass("active");
-    
+
+    setTimeout(function(){
+        $("#slider").animate({scrollLeft:'0'},0); /* Reset the silder to initial position*/
+    },400);
+
     setTimeout(function(){
         getSliderData(event.target.id);
         $("#slider").animate({
             opacity:1,
         },300);
-    },500)
+    },500);
+    
 });
 
 // SLIDER CONTROLLER
@@ -52,11 +55,11 @@ function getScrollLength(){
     return (320*(10 - ($(window).width()/320))) + 50;
 }
 
-// RETURN SILDER JSON DATA BASED ON THE NAVBAR
+// PROVIDES SILDER JSON DATA BASED ON THE NAVBAR
 
 function getSliderData(text){
     let res = "";
-    let data;
+    let data = [];
 
     if(text === "popular"){
         data = movieList.filter(movie => movie.popular === true);
@@ -71,9 +74,17 @@ function getSliderData(text){
     data.forEach(function(movie) {
         res += `
                     <div class="card" id="${movie.imdbID}">
-                    <img src="${movie.Poster}" alt="${movie.Title}">
-                    <div class="card-details">
-                    </div>
+                        <img src="${movie.Poster}" alt="${movie.Title}">
+                        <div class="card-details">
+                            <div class="text-holder">
+                                <p class="title">${movie.Title}</p>
+                                <p class="subtitle">Imdb &nbsp;<span>${movie.imdbRating}</span>&nbsp;&nbsp;|&nbsp;&nbsp;${movie.Year} </p>
+                            </div>
+                            <div class="arrow-holder">
+                                <div class="red-dot"></div>
+                                <img src="../assets/svg/right-arrow.svg">
+                            </div>
+                        </div>
                     </div>
                 `;
         });

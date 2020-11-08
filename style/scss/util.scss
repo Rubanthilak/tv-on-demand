@@ -61,12 +61,72 @@
 
   .card-details {
     position: absolute;
+    display: flex;
+    justify-content: space-between;
     bottom: 0px;
     height: 0%;
-    width: 100%;
+    width: calc(100% - 60px);
     background-image: var(--card-gradient);
     transition: 0.65s;
     opacity: 0.3;
+    padding: 0px 30px;
+
+    .text-holder{
+      
+      width: calc(100% - 70px);
+
+      .title{
+        color: var(--white);
+        font-weight: 600;
+        font-family: var(--font-reg);
+        line-height: 38px;
+        text-overflow: ellipsis;
+        overflow: hidden; 
+        white-space: nowrap;
+      }
+  
+      .subtitle{
+        color: var(--gray);
+        font-weight: 200;
+        font-family: var(--font-reg);
+        font-size: 12px;
+  
+        span{
+          font-weight: 700;
+          color: var(--red);
+        }
+      }
+    }
+
+    .arrow-holder{
+      width: 60px;
+      height: 60px;
+      position: relative;
+
+      .red-dot {
+        margin-top: 32.5px;
+        margin-left: 35px;
+        height: 25px;
+        width: 25px;
+        background-color: var(--red);
+        border-radius: 100%;
+      }
+
+      img{
+        position: absolute;
+        right: -15px;
+        top: 30px;
+        height: 60%;
+        width: 50%;
+      }
+    }
+    
+    &:hover{
+      img{
+        transition: all 1s ease-in-out;
+        animation: juggle 1.5s infinite;
+      }
+    }
   }
 
   &:hover {
@@ -74,7 +134,8 @@
     min-width: 310px;
     box-shadow: 0 0px 30px #00000054;
     .card-details {
-      height: 25%;
+      height: calc(25% - 50px);
+      padding: 20px 30px;
       opacity: 1;
     }
     @media screen and (max-height: 800px) {
@@ -130,3 +191,17 @@
     margin-top: 10px;
   }
 }
+
+//animation 
+@keyframes juggle{
+  0%{
+    right: -15px;
+  }
+  50%{
+    right: -10px;
+  }
+  100%{
+    right: -15px;
+  }
+}
+
