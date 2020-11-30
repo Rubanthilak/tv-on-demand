@@ -62,23 +62,6 @@ header {
   }
 }
 
-input {
-    height: 40px;
-    width: 200px;
-    margin: auto 0px;
-    border: none;
-    outline: none;
-    border-radius: 25px;
-    padding: 0px 25px;
-    background: var(--gray);
-    font-family: var(--font-reg);
-
-    &:focus {
-      border: none;
-      outline: none;
-    }
-}
-
 nav{
   margin-top: 60px;
   p{

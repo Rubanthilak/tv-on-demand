@@ -26,6 +26,19 @@ module.exports = {
                 ],
             },
             {
+                test: /\.(svg)$/i,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'svg/',
+                        publicPath: 'svg/', // this is added inorder to overwrite the url() in the css file.
+                    },
+                  },
+                ],
+            },
+            {
                 test: /\.scss$/,
                 use: [
                     MiniCssExtractPlugin.loader,
@@ -60,7 +73,7 @@ module.exports = {
     },
     output: {
         filename: `js/script.js`,
-        path: path.resolve(__dirname, 'assets'),
+        path: path.resolve(__dirname, 'src'),
         publicPath: ASSET_PATH
     },
     plugins: [

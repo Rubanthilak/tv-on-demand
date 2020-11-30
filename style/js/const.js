@@ -7,7 +7,7 @@ export const movieList = [
         "imdbRating":"8.3",
         "Poster":"https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_SX300.jpg",
         "featured": true,
-        "popular": true,
+        "popular": false,
         "toprated": true
     },
     {

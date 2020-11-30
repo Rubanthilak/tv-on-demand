@@ -82,7 +82,7 @@ function getSliderData(text){
                             </div>
                             <div class="arrow-holder">
                                 <div class="red-dot"></div>
-                                <img src="../assets/svg/right-arrow.svg">
+                                <img src="../src/svg/right-arrow.svg">
                             </div>
                         </div>
                     </div>
