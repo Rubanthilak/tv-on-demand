@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/style.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <title>TV on Demand</title>
 </head>
 <body>
@@ -19,24 +18,7 @@
         </div>
     </header>
     <div class="container mini-dash"></div>
-    <nav class="container flex mt-30">
-        <p id="popular" class="active">POPULAR</p>
-        <p id="featured">FEATURED</p>
-        <p id="toprated">TOP IMDB</p>
-    </nav>
-    <div id="slider" class="slider-container">
-      <!-- Output from javascript file   -->
-    </div>
-    <div class="container slider-controller">
-        <div class="lt-arrow">
-            <div class="bar bar1"></div>
-            <div class="bar bar2"></div>
-        </div>
-        <div class="rt-arrow">
-            <div class="bar bar1"></div>
-            <div class="bar bar2"></div>
-        </div>
-    </div>
-    <script src="./src/js/script.js"></script>
+    <div id="app"></div>
+    <script type="module" src="./src/js/script.js"></script>
 </body>
 </html>
