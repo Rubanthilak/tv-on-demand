@@ -34,6 +34,7 @@ libpeerconnection.log
 npm-debug.log
 yarn-error.log
 testem.log
+package-lock.json
 
 # system files
 .DS_Store
