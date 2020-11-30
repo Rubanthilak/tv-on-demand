@@ -5,7 +5,7 @@
 **/assets
 
 # compiled output
-**/dist
+**/src
 **/tmp
 **/out-tsc
 
