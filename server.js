@@ -4,7 +4,9 @@ const app = express();
 const port = 5500;
 
 app.use("/src",express.static(path.resolve(__dirname,"src")))
+app.use("/*/src",express.static(path.resolve(__dirname,"src")))
 app.use("/svg",express.static(path.resolve(__dirname,"svg")))
+app.use("/*/svg",express.static(path.resolve(__dirname,"svg")))
 
 app.get("/*",(req,res)=>{
     res.sendFile(path.resolve("index.html"));

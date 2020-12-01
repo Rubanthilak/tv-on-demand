@@ -1,0 +1,11 @@
+
+.row-max-3 {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 270px));
+    justify-content: space-between;
+    
+    @media screen and (max-width:992px){
+        justify-content: space-evenly;
+    }
+}

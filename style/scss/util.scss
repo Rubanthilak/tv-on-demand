@@ -145,6 +145,27 @@
   }
 }
 
+.search-res{
+  padding: 50px 0px;
+
+  .card{
+    &:hover {
+      height: 420px;
+      min-width: 270px;
+      box-shadow: 0 0px 30px #00000054;
+      .card-details {
+        height: calc(25% - 50px);
+        padding: 20px 30px;
+        opacity: 1;
+      }
+      @media screen and (max-height: 800px) {
+        height: 420px;
+        min-width: 270px;
+      }
+    }
+  }
+}
+
 .slider-controller {
   display: flex;
   height: 100px;
@@ -243,4 +264,34 @@
   img{
     cursor: pointer;
   }
+}
+
+.pagination{
+    padding-bottom: 50px;
+    button{
+      padding: 16px 38px;
+      font-size: 16px;
+      border-radius: 5px;
+      font-weight: 700;
+      font-family: var(--font-reg);
+      background-color: var(--white);
+      border: none;
+      outline: none;
+      box-shadow: var(--card-shadow);
+      cursor: pointer;
+
+      &:last-of-type{
+        margin-left: 35px;
+      }
+
+      &:hover{
+        background-color: var(--red);
+        color: var(--white);
+      }
+
+      &.disabled{
+        background-color: var(--hash);
+        color: var(--black);
+      }
+    }
 }
