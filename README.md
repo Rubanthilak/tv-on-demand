@@ -2,4 +2,4 @@
 
 ## Movie wiki using OMDb API
 
-[Ref-Image](/md/ref-image.png)
+![Ref-Image](/md/ref-image.png)
