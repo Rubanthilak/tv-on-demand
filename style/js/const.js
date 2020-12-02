@@ -1,14 +1,24 @@
 
 export const movieList = [
     {
+        "Title":"Soorarai Pottru",
+        "Year":"2020",
+        "imdbID":"tt10189514",
+        "imdbRating":"8.8",
+        "toprated": true,
+        "popular": true,
+        "featured": false,
+        "Poster":"https://m.media-amazon.com/images/M/MV5BNzA3NzM2ZDItMmQ4OC00NjhmLTg0NWUtYzU1Yjg5M2VjM2M0XkEyXkFqcGdeQXVyODIwMDI1NjM@._V1_SX300.jpg",
+    },
+    {
         "Title": "Baby Driver", 
         "Year": "2017", 
         "imdbID":"tt380160",
         "imdbRating":"8.3",
         "Poster":"https://m.media-amazon.com/images/M/MV5BMjM3MjQ1MzkxNl5BMl5BanBnXkFtZTgwODk1ODgyMjI@._V1_SX300.jpg",
         "featured": true,
-        "popular": false,
-        "toprated": true
+        "popular": true,
+        "toprated": false
     },
     {
         "Title":"Joker",
@@ -17,7 +27,7 @@ export const movieList = [
         "imdbID":"tt7286456",
         "Poster":"https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
         "featured": true,
-        "popular": true,
+        "popular": false,
         "toprated": true
     },
     {

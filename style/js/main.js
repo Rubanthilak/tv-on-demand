@@ -136,3 +136,7 @@ $(document).on("keypress",'#sinput',(e)=>{
         return false; // prevent the button click from happening
     }
 });
+
+$(document).on('click','.card',(e) => {
+    navigateTo("/view/"+e.currentTarget.id)
+})
