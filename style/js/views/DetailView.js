@@ -9,7 +9,7 @@ export default class extends AbstractView{
 
     async getHtml(){
        let res = ``;
-       let promise = await fetch("https://www.omdbapi.com/?i=" + this.params.id + "&apikey=47f58f6a")
+       let promise = await fetch("https://www.omdbapi.com/?i=" + this.params.id + "your-api-key")
        let data = await promise.json();
        if(data.Response != "False"){
        res += `
