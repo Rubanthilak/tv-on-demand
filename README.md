@@ -32,6 +32,8 @@ I used OMDb API to retrive Movie and Series Content. You can check about OMDb AP
 
 Visit `localhost:5500` and you should be live. 
 
+Don't forget to fill the api-key in required areas.
+
 ---
 ### Found any 🐛? Please Fix it 
 ---
